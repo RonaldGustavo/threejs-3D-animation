@@ -1,5 +1,5 @@
 # Three.js 3D Animation Project
-This project demonstrates a simple 3D animation using Three.js, built with Vite and vanilla JavaScript.
+A project showcasing 3D animation built using the Three.js library, vanilla javascript, and built with Vite.
 
 ## Features
 - Modern project structure using Vite
@@ -16,6 +16,6 @@ This project demonstrates a simple 3D animation using Three.js, built with Vite 
 
 Here is the UI:
 
-![UI Preview](https://github.com/RonaldGustavo/personal-app-ronald/blob/main/public/assets/image/UI-HOME1.png)
+![UI Preview](https://github.com/RonaldGustavo/threejs-3D-animation/blob/master/src/assets/ui_view.png)
 
-> You can also view the live site [here](https://personal-app-ronald.vercel.app)
+> You can also view the live site [here](https://threejs-3-d-animation.vercel.app/)
