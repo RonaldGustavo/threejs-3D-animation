@@ -1,6 +1,36 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 
+function drawDiceFace(ctx, value) {
+  ctx.clearRect(0, 0, 128, 128);
+  ctx.fillStyle = '#fff';
+  ctx.fillRect(0, 0, 128, 128);
+  ctx.fillStyle = '#222';
+  const dotRadius = 14;
+  const positions = [
+    [64, 64], // 1
+    [32, 32], [96, 96], // 2
+    [32, 32], [64, 64], [96, 96], // 3
+    [32, 32], [32, 96], [96, 32], [96, 96], // 4
+    [32, 32], [32, 96], [64, 64], [96, 32], [96, 96], // 5
+    [32, 32], [32, 64], [32, 96], [96, 32], [96, 64], [96, 96] // 6
+  ];
+  let dots = [];
+  switch (value) {
+    case 1: dots = [positions[0]]; break;
+    case 2: dots = [positions[1], positions[2]]; break;
+    case 3: dots = [positions[3], positions[4], positions[5]]; break;
+    case 4: dots = [positions[6], positions[7], positions[8], positions[9]]; break;
+    case 5: dots = [positions[10], positions[11], positions[12], positions[13], positions[14]]; break;
+    case 6: dots = [positions[15], positions[16], positions[17], positions[18], positions[19], positions[20]]; break;
+  }
+  dots.forEach(([x, y]) => {
+    ctx.beginPath();
+    ctx.arc(x, y, dotRadius, 0, Math.PI * 2);
+    ctx.fill();
+  });
+}
+
 export function startAnimation() {
   // Scene setup
   const scene = new THREE.Scene();
@@ -35,13 +65,7 @@ export function startAnimation() {
     canvas.width = 128;
     canvas.height = 128;
     const ctx = canvas.getContext('2d');
-    ctx.fillStyle = ['#e74c3c','#f1c40f','#2ecc71','#3498db','#9b59b6','#fff'][i-1];
-    ctx.fillRect(0, 0, 128, 128);
-    ctx.font = 'bold 80px Segoe UI, Arial';
-    ctx.fillStyle = '#222';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillText(i, 64, 70);
+    drawDiceFace(ctx, i);
     diceMaterials.push(new THREE.MeshStandardMaterial({ map: new THREE.CanvasTexture(canvas) }));
   }
   const dice = new THREE.Mesh(geometry, diceMaterials);
