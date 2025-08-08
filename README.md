@@ -1,5 +1,4 @@
 # Three.js 3D Animation Project
-
 This project demonstrates a simple 3D animation using Three.js, built with Vite and vanilla JavaScript.
 
 ## Features
@@ -7,29 +6,16 @@ This project demonstrates a simple 3D animation using Three.js, built with Vite 
 - Modular code organization
 - Animated 3D object (rotating cube)
 
-## Getting Started
+## 🚀 Tech Stack Used
+- **Three.js** – JavaScript 3D library for rendering and animating 3D objects
+- **Vite** – Fast frontend build tool and dev server
+- **JavaScript (ES Modules)** – Modern modular JS for clean code organization
+- **OrbitControls** – Three.js extension for interactive camera controls
 
-### Install dependencies
-```bash
-npm install
-```
+## ✨ UI Preview
 
-### Run the development server
-```bash
-npm run dev
-```
+Here is the UI:
 
-Open your browser and navigate to the local server URL (usually http://localhost:5173).
+![UI Preview](https://github.com/RonaldGustavo/personal-app-ronald/blob/main/public/assets/image/UI-HOME1.png)
 
-## Build for production
-```bash
-npm run build
-```
-
-## Project Structure
-- `src/animation.js`: Three.js animation logic
-- `src/main.js`: Entry point
-- `public/`: Static assets
-
-## Customization
-Replace the cube with your own 3D models or animations by editing `src/animation.js`.
+> You can also view the live site [here](https://personal-app-ronald.vercel.app)
