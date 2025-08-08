@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Three.js 3D Animation</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: linear-gradient(120deg, #232526 0%, #414345 100%);
+      color: #fff;
+    }
+    .header {
+      position: absolute;
+      top: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(30, 30, 30, 0.85);
+      padding: 16px 32px;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+      text-align: center;
+      z-index: 10;
+    }
+    .info {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(30, 30, 30, 0.85);
+      padding: 10px 24px;
+      border-radius: 8px;
+      font-size: 1rem;
+      z-index: 10;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    }
+    @media (max-width: 600px) {
+      .header { padding: 8px 12px; font-size: 1rem; }
+      .info { padding: 6px 10px; font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Three.js 3D Animation Demo</h1>
+    <p>Simple project with modern UI and animated 3D cube</p>
+  </div>
+  <div class="info">
+    Drag to rotate, resize window to see responsive 3D view.<br>
+    Powered by <b>Three.js</b> &amp; Vite
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
